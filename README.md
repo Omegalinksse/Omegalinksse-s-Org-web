@@ -152,10 +152,10 @@ npm run lint
 ## 👨‍💼 Leadership & Authorship
 
 **Founder & Lead Software Engineer:**  
-**Ezeh Francis Chukwuebuka**  
+**ANEHI GODWIN OHINOYI**  
 - *Role:* Principal Engineer, Creative Director & Lead Instructor at Omegalinks Digital Technology
 - *Specialization:* Full-Stack Python & Web Development, Database Architectures, CorelDRAW Vector Graphics, and Vocational IT Instruction.
-- *GitHub:* [@francis-chukwuebuka](https://github.com/francis-chukwuebuka)
+- *GitHub:* [@Omegalinksse](https://github.com/Omegalinksse)
 - *Email:* [omegalinksse@gmail.com](mailto:omegalinksse@gmail.com)
 
 ---
