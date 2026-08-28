@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg-navy: #020617;
+    --color-bg-card: rgba(255, 255, 255, 0.04);
+    --color-border-card: rgba(255, 255, 255, 0.08);
+    --color-border-hover: rgba(59, 130, 246, 0.5);
+  }
+
+  body {
+    background-color: #020617;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-tech {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Immersive Dot Grid Pattern from Theme */
+.immersive-grid {
+  background-image: radial-gradient(#3b82f6 0.6px, transparent 0.6px);
+  background-size: 24px 24px;
+}
+
+/* Immersive Glassmorphism & Cyber Card Effects */
+.cyber-card,
+.immersive-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cyber-card:hover,
+.immersive-card:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px);
+}
+
+.cyber-card-active,
+.immersive-card-active {
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.4);
+}
+
+/* Controlled Glows */
+.glow-cyan {
+  box-shadow: 0 0 20px -2px rgba(6, 182, 212, 0.45);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px -2px rgba(59, 130, 246, 0.45);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px -2px rgba(168, 85, 247, 0.35);
+}
+
+/* Theme Gradients */
+.text-cyber-gradient,
+.text-immersive-gradient {
+  background: linear-gradient(135deg, #ffffff 15%, #93c5fd 60%, #67e8f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-blue-gradient {
+  background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 60%, #a5f3fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle circuit background grid */
+.circuit-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
