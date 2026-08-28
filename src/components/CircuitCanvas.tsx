@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useTheme } from '../context/ThemeContext';
 
 interface CircuitCanvasProps {
   className?: string;
@@ -12,6 +13,7 @@ export const CircuitCanvas: React.FC<CircuitCanvasProps> = ({
   interactive = true,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const { isDark } = useTheme();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -66,12 +68,11 @@ export const CircuitCanvas: React.FC<CircuitCanvasProps> = ({
       high: 85,
     };
 
-    const colors = [
-      '#06b6d4', // Cyan
-      '#0284c7', // Sky Blue
-      '#3b82f6', // Electric Blue
-      '#818cf8', // Indigo/Purple accent
-    ];
+    const colors = isDark
+      ? ['#06b6d4', '#0284c7', '#3b82f6', '#818cf8']
+      : ['#0284c7', '#2563eb', '#1d4ed8', '#0891b2'];
+
+    const lineColor = isDark ? '#38bdf8' : '#2563eb';
 
     const resize = () => {
       const parent = canvas.parentElement;
@@ -96,7 +97,7 @@ export const CircuitCanvas: React.FC<CircuitCanvasProps> = ({
         vx: (Math.random() - 0.5) * 0.4,
         vy: (Math.random() - 0.5) * 0.4,
         radius: Math.random() * 1.8 + 1.2,
-        baseAlpha: Math.random() * 0.4 + 0.2,
+        baseAlpha: isDark ? Math.random() * 0.4 + 0.2 : Math.random() * 0.35 + 0.15,
         color: colors[Math.floor(Math.random() * colors.length)],
         pulseSpeed: Math.random() * 0.02 + 0.01,
         pulseVal: Math.random() * Math.PI,
@@ -147,7 +148,7 @@ export const CircuitCanvas: React.FC<CircuitCanvasProps> = ({
         ctx.fillStyle = node.color;
         ctx.globalAlpha = Math.max(0.05, Math.min(currentAlpha, 0.9));
         ctx.shadowColor = node.color;
-        ctx.shadowBlur = 8;
+        ctx.shadowBlur = isDark ? 8 : 4;
         ctx.fill();
         ctx.shadowBlur = 0;
 
@@ -160,7 +161,7 @@ export const CircuitCanvas: React.FC<CircuitCanvasProps> = ({
 
           const maxDist = 110;
           if (dist < maxDist) {
-            const lineAlpha = (1 - dist / maxDist) * 0.22;
+            const lineAlpha = (1 - dist / maxDist) * (isDark ? 0.22 : 0.15);
             ctx.beginPath();
 
             // Circuit-style 90-degree bend or direct line depending on coords
@@ -176,7 +177,7 @@ export const CircuitCanvas: React.FC<CircuitCanvasProps> = ({
               ctx.lineTo(nodeB.x, nodeB.y);
             }
 
-            ctx.strokeStyle = '#38bdf8';
+            ctx.strokeStyle = lineColor;
             ctx.globalAlpha = lineAlpha;
             ctx.lineWidth = 0.8;
             ctx.stroke();
@@ -198,7 +199,7 @@ export const CircuitCanvas: React.FC<CircuitCanvasProps> = ({
         window.removeEventListener('mouseleave', handleMouseLeave);
       }
     };
-  }, [density, interactive]);
+  }, [density, interactive, isDark]);
 
   return (
     <canvas

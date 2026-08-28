@@ -15,21 +15,21 @@ export const InsightsSection: React.FC = () => {
   const [activeArticle, setActiveArticle] = useState<BlogPost | null>(null);
 
   return (
-    <section id="insights" className="relative py-20 bg-[#020617] border-t border-white/5">
+    <section id="insights" className="relative py-20 bg-slate-50 dark:bg-[#020617] border-t border-slate-200 dark:border-white/5 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold tracking-widest uppercase mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-blue-700 dark:text-blue-400 text-[10px] font-bold tracking-widest uppercase mb-3">
             <BookOpen className="w-3.5 h-3.5" />
             <span>Thought Leadership & Industry Perspectives</span>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight">
+          <h2 className="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-slate-900 dark:text-white tracking-tight">
             OMEGALINKS <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-cyan-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-600 dark:from-blue-400 dark:via-sky-300 dark:to-cyan-400">
               TECH INSIGHTS
             </span>
           </h2>
-          <p className="mt-4 text-slate-400 text-sm sm:text-base leading-relaxed">
+          <p className="mt-4 text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
             Practical analyses on software engineering architectures, digital transformation strategies, and modern computer literacy.
           </p>
         </div>
@@ -39,39 +39,39 @@ export const InsightsSection: React.FC = () => {
           {BLOG_POSTS.map((post) => (
             <article
               key={post.id}
-              className="group rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/50 p-6 transition-all duration-300 hover:-translate-y-1 shadow-lg text-left flex flex-col justify-between backdrop-blur-sm"
+              className="group rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-blue-500/50 p-6 transition-all duration-300 hover:-translate-y-1 shadow-sm dark:shadow-lg text-left flex flex-col justify-between backdrop-blur-sm"
             >
               <div>
                 {/* Meta Header */}
                 <div className="flex items-center justify-between mb-3 text-xs">
-                  <span className="px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 font-tech font-semibold uppercase text-[10px]">
+                  <span className="px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-blue-700 dark:text-blue-300 font-tech font-semibold uppercase text-[10px]">
                     {post.category}
                   </span>
-                  <div className="flex items-center gap-1 text-slate-400 text-[11px]">
-                    <Clock className="w-3 h-3 text-slate-500" />
+                  <div className="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-[11px]">
+                    <Clock className="w-3 h-3 text-slate-400 dark:text-slate-500" />
                     <span>{post.readTime}</span>
                   </div>
                 </div>
 
-                <h3 className="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors mb-2.5 line-clamp-2">
+                <h3 className="font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-300 transition-colors mb-2.5 line-clamp-2">
                   {post.title}
                 </h3>
 
-                <p className="text-xs text-slate-400 leading-relaxed mb-4 line-clamp-3">
+                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4 line-clamp-3">
                   {post.summary}
                 </p>
               </div>
 
               {/* Footer Author & Read Action */}
-              <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                <div className="flex items-center gap-1.5 text-slate-300 text-xs">
-                  <User className="w-3.5 h-3.5 text-blue-400" />
+              <div className="pt-4 border-t border-slate-100 dark:border-white/10 flex items-center justify-between">
+                <div className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300 text-xs">
+                  <User className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                   <span className="text-[11px] font-semibold">{post.author}</span>
                 </div>
 
                 <button
                   onClick={() => setActiveArticle(post)}
-                  className="text-xs font-bold text-blue-400 hover:text-cyan-300 flex items-center gap-1 group/btn"
+                  className="text-xs font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-cyan-300 flex items-center gap-1 group/btn"
                 >
                   <span>Read Article</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
@@ -84,40 +84,40 @@ export const InsightsSection: React.FC = () => {
 
       {/* Full Article Reader Modal */}
       {activeArticle && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/60 dark:bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
           <div
-            className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto rounded-3xl bg-[#020617] border border-white/10 p-6 sm:p-8 text-left shadow-2xl backdrop-blur-xl"
+            className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto rounded-3xl bg-white dark:bg-[#020617] border border-slate-200 dark:border-white/10 p-6 sm:p-8 text-left shadow-2xl backdrop-blur-xl"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setActiveArticle(null)}
-              className="absolute top-5 right-5 p-2 rounded-full bg-white/5 text-slate-400 hover:text-white border border-white/10 transition-colors"
+              className="absolute top-5 right-5 p-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-white/10 transition-colors"
               aria-label="Close article"
             >
               <X className="w-5 h-5" />
             </button>
 
             <div className="flex items-center gap-2 mb-3 text-xs">
-              <span className="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 font-tech font-bold uppercase">
+              <span className="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-400 border border-blue-200 dark:border-blue-500/20 font-tech font-bold uppercase">
                 {activeArticle.category}
               </span>
-              <span className="text-slate-500">•</span>
-              <span className="text-slate-400 font-tech">{activeArticle.date}</span>
-              <span className="text-slate-500">•</span>
-              <span className="text-slate-400 font-tech">{activeArticle.readTime}</span>
+              <span className="text-slate-400 dark:text-slate-500">•</span>
+              <span className="text-slate-600 dark:text-slate-400 font-tech">{activeArticle.date}</span>
+              <span className="text-slate-400 dark:text-slate-500">•</span>
+              <span className="text-slate-600 dark:text-slate-400 font-tech">{activeArticle.readTime}</span>
             </div>
 
-            <h2 className="font-display font-black text-2xl sm:text-3xl text-white mb-3 leading-tight">
+            <h2 className="font-display font-black text-2xl sm:text-3xl text-slate-900 dark:text-white mb-3 leading-tight">
               {activeArticle.title}
             </h2>
 
-            <div className="flex items-center gap-2 text-xs text-slate-300 pb-4 mb-6 border-b border-white/10">
-              <User className="w-4 h-4 text-blue-400" />
+            <div className="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-300 pb-4 mb-6 border-b border-slate-200 dark:border-white/10">
+              <User className="w-4 h-4 text-blue-600 dark:text-blue-400" />
               <span>By {activeArticle.author} (Founder & Lead Developer, Omegalinks)</span>
             </div>
 
-            <div className="space-y-4 text-slate-300 text-sm leading-relaxed">
-              <p className="font-semibold text-slate-200">
+            <div className="space-y-4 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+              <p className="font-semibold text-slate-900 dark:text-slate-200">
                 {activeArticle.summary}
               </p>
               <p>
@@ -126,7 +126,7 @@ export const InsightsSection: React.FC = () => {
               <p>
                 At Omegalinks Digital Technology, our projects demonstrate that whether designing a localized campus recovery platform like TraceHop, establishing multi-branch inventory tracking, or training young professionals in python programming, intentional engineering delivers lasting institutional value.
               </p>
-              <div className="p-4 rounded-xl bg-blue-500/10 border-l-4 border-blue-500 text-blue-200 text-xs italic my-4">
+              <div className="p-4 rounded-xl bg-blue-50 dark:bg-blue-500/10 border-l-4 border-blue-600 dark:border-blue-500 text-blue-900 dark:text-blue-200 text-xs italic my-4">
                 "Digital transformation is not simply installing software; it is the thoughtful alignment of technology, human capability, and operational discipline."
               </div>
               <p>
@@ -134,10 +134,10 @@ export const InsightsSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="mt-8 pt-4 border-t border-white/10 flex justify-end">
+            <div className="mt-8 pt-4 border-t border-slate-200 dark:border-white/10 flex justify-end">
               <button
                 onClick={() => setActiveArticle(null)}
-                className="px-5 py-2 rounded-full bg-white/5 text-slate-200 hover:text-white border border-white/10 hover:border-blue-500/50 text-xs font-bold uppercase tracking-wider transition-all"
+                className="px-5 py-2 rounded-full bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white border border-slate-300 dark:border-white/10 hover:border-blue-500/50 text-xs font-bold uppercase tracking-wider transition-all"
               >
                 Close Article
               </button>

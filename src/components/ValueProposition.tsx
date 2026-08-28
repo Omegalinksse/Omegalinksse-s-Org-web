@@ -71,20 +71,20 @@ export const ValueProposition: React.FC<ValuePropositionProps> = ({
   ];
 
   return (
-    <section className="relative py-12 bg-[#020617] border-y border-white/5">
+    <section className="relative py-12 bg-slate-50 dark:bg-[#020617] border-y border-slate-200 dark:border-white/5 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Journey Ribbon: IDEA -> DESIGN -> BUILD -> CONNECT -> IMPACT */}
-        <div className="mb-12 p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm shadow-[0_4px_25px_rgba(0,0,0,0.5)]">
+        <div className="mb-12 p-4 sm:p-5 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 backdrop-blur-sm shadow-sm dark:shadow-[0_4px_25px_rgba(0,0,0,0.5)]">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2.5 text-left">
-              <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 border border-blue-500/30">
+              <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-500/30">
                 <Network className="w-5 h-5" />
               </div>
               <div>
-                <span className="font-tech text-xs tracking-wider text-blue-400 font-bold uppercase">
+                <span className="font-tech text-xs tracking-wider text-blue-700 dark:text-blue-400 font-bold uppercase">
                   The Omegalinks Digital Journey
                 </span>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs text-slate-500 dark:text-slate-400">
                   Connecting ideas with impact through disciplined technology
                 </p>
               </div>
@@ -94,16 +94,16 @@ export const ValueProposition: React.FC<ValuePropositionProps> = ({
             <div className="flex items-center flex-wrap justify-center gap-2">
               {COMPANY_INFO.journeySteps.map((step, idx) => (
                 <React.Fragment key={step.step}>
-                  <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 hover:border-blue-500/40 transition-colors">
-                    <span className="font-tech text-[10px] text-blue-400 font-bold">
+                  <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-blue-500/40 transition-colors">
+                    <span className="font-tech text-[10px] text-blue-600 dark:text-blue-400 font-bold">
                       {step.step}
                     </span>
-                    <span className="text-xs font-bold text-white">
+                    <span className="text-xs font-bold text-slate-800 dark:text-white">
                       {step.name}
                     </span>
                   </div>
                   {idx < COMPANY_INFO.journeySteps.length - 1 && (
-                    <div className="w-3 h-[1px] bg-white/10 hidden sm:inline" />
+                    <div className="w-3 h-[1px] bg-slate-200 dark:bg-white/10 hidden sm:inline" />
                   )}
                 </React.Fragment>
               ))}
@@ -119,34 +119,34 @@ export const ValueProposition: React.FC<ValuePropositionProps> = ({
               <div
                 key={item.id}
                 onClick={() => onNavigateSection(item.targetSection)}
-                className="group relative p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer shadow-lg flex flex-col justify-between"
+                className="group relative p-6 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer shadow-sm dark:shadow-lg flex flex-col justify-between"
               >
                 <div>
                   {/* Header Icon & Action */}
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 group-hover:scale-105 transition-transform border border-blue-500/20">
+                    <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:scale-105 transition-transform border border-blue-200 dark:border-blue-500/20">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="font-tech tracking-widest text-xs font-bold text-slate-500 group-hover:text-blue-400">
+                    <span className="font-tech tracking-widest text-xs font-bold text-slate-400 dark:text-slate-500 group-hover:text-blue-600 dark:group-hover:text-blue-400">
                       0{valueProps.indexOf(item) + 1}
                     </span>
                   </div>
 
                   <div className="mb-2">
-                    <h3 className="font-display font-black text-2xl tracking-wider text-white flex items-center gap-2">
+                    <h3 className="font-display font-black text-2xl tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
                       {item.action}
                     </h3>
-                    <p className="font-semibold text-xs text-slate-300 mt-1">
+                    <p className="font-semibold text-xs text-slate-700 dark:text-slate-300 mt-1">
                       {item.tagline}
                     </p>
                   </div>
 
-                  <p className="text-xs text-slate-400 leading-relaxed mt-2.5 line-clamp-3">
+                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mt-2.5 line-clamp-3">
                     {item.description}
                   </p>
                 </div>
 
-                <div className="mt-5 pt-3 border-t border-white/10 flex items-center justify-between text-xs font-semibold text-blue-400 group-hover:text-cyan-300">
+                <div className="mt-5 pt-3 border-t border-slate-100 dark:border-white/10 flex items-center justify-between text-xs font-semibold text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-cyan-300">
                   <span>Explore {item.action}</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </div>

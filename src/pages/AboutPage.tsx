@@ -72,7 +72,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
             </button>
             <button
               onClick={() => onNavigate('founder')}
-              className="px-5 py-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 hover:text-white font-semibold text-xs transition-all"
+              className="px-5 py-2.5 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 border border-slate-300 dark:border-white/10 text-slate-800 dark:text-slate-200 hover:text-slate-950 dark:hover:text-white font-semibold text-xs transition-all shadow-sm"
             >
               Meet The Founder
             </button>
@@ -87,17 +87,17 @@ export const AboutPage: React.FC<AboutPageProps> = ({
       />
 
       {/* 3. Corporate Values Deep Dive */}
-      <section className="py-20 bg-[#020617] relative border-t border-white/5">
+      <section className="py-20 bg-slate-100/60 dark:bg-[#020617] relative border-t border-slate-200 dark:border-white/5 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mb-14">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[10px] font-bold tracking-widest uppercase mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-cyan-500/10 border border-blue-200 dark:border-cyan-500/20 text-blue-700 dark:text-cyan-400 text-[10px] font-bold tracking-widest uppercase mb-3">
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>Our Operating Philosophy</span>
             </div>
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 dark:text-white tracking-tight">
               Values That Define Every System We Build
             </h2>
-            <p className="text-slate-300 text-sm sm:text-base mt-3">
+            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base mt-3">
               Whether architecting enterprise software or training student developers, our work is governed by four unwavering standards.
             </p>
           </div>
@@ -108,15 +108,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({
               return (
                 <div
                   key={idx}
-                  className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-cyan-500/40 transition-all duration-300 group hover:bg-white/[0.04]"
+                  className="p-6 rounded-2xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 hover:border-blue-500 dark:hover:border-cyan-500/40 shadow-sm dark:shadow-none transition-all duration-300 group hover:bg-slate-50 dark:hover:bg-white/[0.04]"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 text-cyan-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/30 text-blue-600 dark:text-cyan-400 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="font-display font-bold text-lg text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                  <h3 className="font-display font-bold text-lg text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-300 transition-colors">
                     {val.title}
                   </h3>
-                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
                     {val.desc}
                   </p>
                 </div>
@@ -127,18 +127,18 @@ export const AboutPage: React.FC<AboutPageProps> = ({
       </section>
 
       {/* 4. Strategic Founder Spotlight */}
-      <section className="py-20 bg-gradient-to-b from-[#020617] via-slate-900/40 to-[#020617] relative border-t border-white/5">
+      <section className="py-20 bg-gradient-to-b from-slate-100 via-slate-50 to-slate-100 dark:from-[#020617] dark:via-slate-900/40 dark:to-[#020617] relative border-t border-slate-200 dark:border-white/5 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="p-8 sm:p-12 rounded-3xl bg-white/[0.02] border border-white/10 relative overflow-hidden backdrop-blur-xl">
+          <div className="p-8 sm:p-12 rounded-3xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 relative overflow-hidden backdrop-blur-xl shadow-sm dark:shadow-none">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8">
-                <div className="text-cyan-400 font-tech text-xs font-semibold tracking-wider uppercase mb-2">
+                <div className="text-blue-600 dark:text-cyan-400 font-tech text-xs font-semibold tracking-wider uppercase mb-2">
                   Founder & Principal Lead
                 </div>
-                <h3 className="font-display font-black text-2xl sm:text-3xl text-white mb-3">
+                <h3 className="font-display font-black text-2xl sm:text-3xl text-slate-900 dark:text-white mb-3">
                   Anehi Godwin Ohinoyi
                 </h3>
-                <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                <p className="text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
                   &ldquo;At Omegalinks, we bridge the gap between technical capability and everyday usability. Technology shouldn't be an abstract luxury—it must solve real operational hurdles, create sustainable livelihoods, and empower our communities to lead digital innovation.&rdquo;
                 </p>
                 <div className="flex flex-wrap items-center gap-4">
@@ -151,7 +151,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
                   </button>
                   <button
                     onClick={() => onOpenContact('digital-technology', 'Direct Founder Consultation')}
-                    className="px-6 py-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 text-xs font-semibold transition-all"
+                    className="px-6 py-2.5 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 border border-slate-300 dark:border-white/10 text-slate-800 dark:text-slate-200 text-xs font-semibold transition-all shadow-sm"
                   >
                     <span>Book Founder Consultation</span>
                   </button>
@@ -159,14 +159,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({
               </div>
 
               <div className="lg:col-span-4 flex justify-center">
-                <div className="p-6 rounded-2xl bg-[#030a1b] border border-cyan-500/30 text-center max-w-xs w-full">
-                  <div className="w-20 h-20 rounded-full bg-blue-600/20 border border-cyan-400/40 mx-auto flex items-center justify-center mb-4">
-                    <span className="font-display font-black text-2xl text-cyan-300">AG</span>
+                <div className="p-6 rounded-2xl bg-slate-50 dark:bg-[#030a1b] border border-blue-200 dark:border-cyan-500/30 text-center max-w-xs w-full shadow-md">
+                  <div className="w-20 h-20 rounded-full bg-blue-100 dark:bg-blue-600/20 border border-blue-300 dark:border-cyan-400/40 mx-auto flex items-center justify-center mb-4">
+                    <span className="font-display font-black text-2xl text-blue-600 dark:text-cyan-300">AG</span>
                   </div>
-                  <div className="font-display font-bold text-white text-base">Anehi Godwin Ohinoyi</div>
-                  <div className="text-cyan-400 text-xs mt-1">Lead Software Engineer & Director</div>
-                  <div className="text-slate-400 text-[11px] mt-2 flex items-center justify-center gap-1">
-                    <MapPin className="w-3.5 h-3.5 text-blue-400" />
+                  <div className="font-display font-bold text-slate-900 dark:text-white text-base">Anehi Godwin Ohinoyi</div>
+                  <div className="text-blue-600 dark:text-cyan-400 text-xs mt-1 font-medium">Lead Software Engineer & Director</div>
+                  <div className="text-slate-500 dark:text-slate-400 text-[11px] mt-2 flex items-center justify-center gap-1">
+                    <MapPin className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                     <span>Okene, Kogi State, Nigeria</span>
                   </div>
                 </div>
@@ -180,12 +180,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({
       <ProcessSection onStartWorkflow={() => onOpenContact()} />
 
       {/* 6. Footer Call to Action */}
-      <section className="py-16 bg-[#020617] border-t border-white/5 text-center">
+      <section className="py-16 bg-slate-100/70 dark:bg-[#020617] border-t border-slate-200 dark:border-white/5 text-center transition-colors">
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="font-display font-bold text-2xl text-white mb-3">
+          <h3 className="font-display font-bold text-2xl text-slate-900 dark:text-white mb-3">
             Want to Collaborate with Omegalinks?
           </h3>
-          <p className="text-slate-300 text-sm mb-6">
+          <p className="text-slate-600 dark:text-slate-300 text-sm mb-6">
             We welcome conversations with businesses, founders, academic institutions, and prospective students.
           </p>
           <button

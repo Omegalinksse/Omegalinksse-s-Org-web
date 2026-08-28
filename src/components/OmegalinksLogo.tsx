@@ -64,11 +64,11 @@ export const OmegalinksLogo: React.FC<OmegalinksLogoProps> = ({
         </div>
         <div className="flex flex-col text-left">
           <div className="flex items-center gap-1.5">
-            <span className="font-display font-extrabold tracking-wider text-white text-base sm:text-lg md:text-xl leading-none group-hover:text-cyan-300 transition-colors">
+            <span className="font-display font-extrabold tracking-wider text-slate-900 dark:text-white text-base sm:text-lg md:text-xl leading-none group-hover:text-blue-600 dark:group-hover:text-cyan-300 transition-colors">
               OMEGALINKS
             </span>
           </div>
-          <span className="font-tech tracking-[0.22em] text-[8.5px] sm:text-[9.5px] text-cyan-400 font-semibold uppercase mt-0.5">
+          <span className="font-tech tracking-[0.22em] text-[8.5px] sm:text-[9.5px] text-blue-600 dark:text-cyan-400 font-semibold uppercase mt-0.5">
             Digital Technology
           </span>
         </div>
@@ -81,18 +81,18 @@ export const OmegalinksLogo: React.FC<OmegalinksLogoProps> = ({
     <div className={`flex flex-col items-center text-center group select-none ${className}`}>
       <div className="relative flex items-center justify-center">
         {/* Soft radial backlight glow matching brand cyan/blue */}
-        <div className="absolute -inset-6 bg-gradient-to-r from-blue-600/20 via-cyan-500/25 to-blue-500/20 rounded-full blur-2xl opacity-70 group-hover:opacity-100 group-hover:blur-3xl transition-all duration-500 pointer-events-none" />
+        <div className="absolute -inset-6 bg-gradient-to-r from-blue-500/15 via-cyan-400/20 to-blue-500/15 dark:from-blue-600/20 dark:via-cyan-500/25 dark:to-blue-500/20 rounded-full blur-2xl opacity-70 group-hover:opacity-100 group-hover:blur-3xl transition-all duration-500 pointer-events-none" />
         
         <img
           src={officialLogoFull}
           alt="Omegalinks Digital Technology Official Organization Logo"
           referrerPolicy="no-referrer"
-          className={`${fullDimensions[size] || fullDimensions.lg} max-w-full h-auto object-contain relative z-10 drop-shadow-[0_4px_30px_rgba(56,189,248,0.35)] group-hover:drop-shadow-[0_4px_45px_rgba(56,189,248,0.6)] group-hover:scale-[1.01] transition-all duration-500`}
+          className={`${fullDimensions[size] || fullDimensions.lg} max-w-full h-auto object-contain relative z-10 drop-shadow-[0_4px_25px_rgba(37,99,235,0.2)] dark:drop-shadow-[0_4px_30px_rgba(56,189,248,0.35)] group-hover:drop-shadow-[0_4px_45px_rgba(56,189,248,0.6)] group-hover:scale-[1.01] transition-all duration-500`}
         />
       </div>
 
       {showTagline && (
-        <p className="font-tech text-xs sm:text-sm text-cyan-300 font-semibold tracking-[0.25em] uppercase mt-4">
+        <p className="font-tech text-xs sm:text-sm text-blue-700 dark:text-cyan-300 font-semibold tracking-[0.25em] uppercase mt-4">
           ONE LINK. ENDLESS POSSIBILITIES.
         </p>
       )}

@@ -48,7 +48,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             </button>
             <button
               onClick={() => onNavigate('portfolio')}
-              className="px-5 py-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 hover:text-white font-semibold text-xs transition-all"
+              className="px-5 py-2.5 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 border border-slate-300 dark:border-white/10 text-slate-800 dark:text-slate-200 hover:text-slate-950 dark:hover:text-white font-semibold text-xs transition-all shadow-sm"
             >
               View In-Production Portfolio
             </button>
@@ -67,53 +67,53 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
       </div>
 
       {/* 3. Division FAQ & Assurance Section */}
-      <section className="py-20 bg-[#020617] border-t border-white/5">
+      <section className="py-20 bg-slate-100/60 dark:bg-[#020617] border-t border-slate-200 dark:border-white/5 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
-            <div className="text-cyan-400 font-tech text-xs uppercase tracking-wider font-semibold mb-2">
+            <div className="text-blue-600 dark:text-cyan-400 font-tech text-xs uppercase tracking-wider font-semibold mb-2">
               Service Delivery Guarantee
             </div>
-            <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
+            <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white tracking-tight">
               Transparent Execution, Reliable Timelines
             </h2>
-            <p className="text-slate-300 text-sm mt-2">
+            <p className="text-slate-600 dark:text-slate-300 text-sm mt-2">
               Every project commissioned with Omegalinks includes strict milestone tracking, documentation, and dedicated post-deployment support.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-              <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 text-cyan-400 flex items-center justify-center mb-4">
+            <div className="p-6 rounded-2xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 shadow-sm">
+              <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-blue-600 dark:text-cyan-400 flex items-center justify-center mb-4">
                 <ShieldCheck className="w-5 h-5" />
               </div>
-              <h3 className="font-display font-bold text-white text-base mb-2">
+              <h3 className="font-display font-bold text-slate-900 dark:text-white text-base mb-2">
                 100% Intellectual Property Rights
               </h3>
-              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
                 Upon project completion and signoff, full source code repositories, design vector master files (.CDR, .AI, .FIG), and system documentation are handed over to your organization.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-              <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 text-cyan-400 flex items-center justify-center mb-4">
+            <div className="p-6 rounded-2xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 shadow-sm">
+              <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-blue-600 dark:text-cyan-400 flex items-center justify-center mb-4">
                 <Clock className="w-5 h-5" />
               </div>
-              <h3 className="font-display font-bold text-white text-base mb-2">
+              <h3 className="font-display font-bold text-slate-900 dark:text-white text-base mb-2">
                 Predictable Milestone Delivery
               </h3>
-              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
                 We establish precise sprint cycles with staged review checkpoints. You test intermediate staging builds before production deployment.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-              <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 text-cyan-400 flex items-center justify-center mb-4">
+            <div className="p-6 rounded-2xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 shadow-sm">
+              <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-blue-600 dark:text-cyan-400 flex items-center justify-center mb-4">
                 <HelpCircle className="w-5 h-5" />
               </div>
-              <h3 className="font-display font-bold text-white text-base mb-2">
+              <h3 className="font-display font-bold text-slate-900 dark:text-white text-base mb-2">
                 Active Post-Launch Support
               </h3>
-              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
                 All delivered software solutions and brand campaigns include dedicated warranty periods, training sessions for your staff, and optional maintenance SLAs.
               </p>
             </div>
@@ -122,12 +122,12 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
       </section>
 
       {/* 4. Bottom Custom Consultation Callout */}
-      <section className="py-16 bg-gradient-to-r from-blue-950/40 via-cyan-950/30 to-blue-950/40 border-t border-white/10 text-center">
+      <section className="py-16 bg-gradient-to-r from-blue-100/60 via-cyan-100/40 to-blue-100/60 dark:from-blue-950/40 dark:via-cyan-950/30 dark:to-blue-950/40 border-t border-slate-200 dark:border-white/10 text-center transition-colors">
         <div className="max-w-3xl mx-auto px-4">
-          <h3 className="font-display font-bold text-2xl sm:text-3xl text-white mb-3">
+          <h3 className="font-display font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-3">
             Have a Specific Project Requirement in Mind?
           </h3>
-          <p className="text-slate-300 text-sm sm:text-base mb-6">
+          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base mb-6">
             We architect bespoke engineering and creative packages suited to your exact organizational constraints and budget.
           </p>
           <button

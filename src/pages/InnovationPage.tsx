@@ -42,7 +42,7 @@ export const InnovationPage: React.FC<InnovationPageProps> = ({
             </button>
             <button
               onClick={() => onNavigate('portfolio')}
-              className="px-5 py-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 hover:text-white font-semibold text-xs transition-all"
+              className="px-5 py-2.5 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 border border-slate-300 dark:border-white/10 text-slate-800 dark:text-slate-200 hover:text-slate-950 dark:hover:text-white font-semibold text-xs transition-all shadow-sm"
             >
               See Commercialized Products
             </button>
@@ -56,17 +56,17 @@ export const InnovationPage: React.FC<InnovationPageProps> = ({
       />
 
       {/* 3. Tech Insights & Thought Leadership */}
-      <div className="relative border-t border-white/5">
+      <div className="relative border-t border-slate-200 dark:border-white/5 transition-colors">
         <InsightsSection />
       </div>
 
       {/* 4. Bottom Incubation Callout */}
-      <section className="py-16 bg-gradient-to-r from-blue-950/40 via-purple-950/30 to-blue-950/40 border-t border-white/10 text-center">
+      <section className="py-16 bg-gradient-to-r from-blue-50 via-purple-50 to-blue-50 dark:from-blue-950/40 dark:via-purple-950/30 dark:to-blue-950/40 border-t border-slate-200 dark:border-white/10 text-center transition-colors">
         <div className="max-w-3xl mx-auto px-4">
-          <h3 className="font-display font-bold text-2xl sm:text-3xl text-white mb-3">
+          <h3 className="font-display font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-3">
             Have a Research Project or Novel Tech Concept?
           </h3>
-          <p className="text-slate-300 text-sm sm:text-base mb-6">
+          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base mb-6">
             We partner with university researchers, student inventors, and forward-thinking founders to turn promising prototypes into scalable production platforms.
           </p>
           <button

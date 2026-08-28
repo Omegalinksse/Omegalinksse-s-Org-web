@@ -44,7 +44,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
             </button>
             <button
               onClick={() => onNavigate('services')}
-              className="px-5 py-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 hover:text-white font-semibold text-xs transition-all"
+              className="px-5 py-2.5 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 border border-slate-300 dark:border-white/10 text-slate-800 dark:text-slate-200 hover:text-slate-950 dark:hover:text-white font-semibold text-xs transition-all shadow-sm"
             >
               View Service Specifications
             </button>
@@ -59,12 +59,12 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
       />
 
       {/* 3. Bottom Callout */}
-      <section className="py-16 bg-[#020617] border-t border-white/5 text-center">
+      <section className="py-16 bg-slate-100/70 dark:bg-[#020617] border-t border-slate-200 dark:border-white/5 text-center transition-colors">
         <div className="max-w-3xl mx-auto px-4">
-          <h3 className="font-display font-bold text-2xl sm:text-3xl text-white mb-3">
+          <h3 className="font-display font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-3">
             Looking for a Specialized Engineering Team?
           </h3>
-          <p className="text-slate-300 text-sm sm:text-base mb-6">
+          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base mb-6">
             We build scalable, maintainable, and elegant software systems tailored to your business challenges.
           </p>
           <button
