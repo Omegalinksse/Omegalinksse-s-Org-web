@@ -10,7 +10,7 @@ import heroImg from '../assets/images/circuit_mesh_hero_1787908273091.jpg';
 import neuralLabImg from '../assets/images/neural_ai_lab_1787908295187.jpg';
 import ecosystemImg from '../assets/images/connected_ecosystem_1787908311558.jpg';
 import softwareImg from '../assets/images/software_code_cyber_1787908329803.jpg';
-import logoFullImg from '../assets/images/omegalinks_pro_logo_tight.png';
+import logoFullImg from '../assets/images/omegalinks_pro_logo_clean.png';
 import logoEmblemImg from '../assets/images/omegalinks_emblem_tight.png';
 import logoOriginalImg from '../assets/images/omegalinks_pro_logo_1787910884635.jpg';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import officialLogoFull from '../assets/images/omegalinks_pro_logo_tight.png';
+import officialLogoFull from '../assets/images/omegalinks_pro_logo_clean.png';
 import officialLogoEmblem from '../assets/images/omegalinks_emblem_tight.png';
 
 interface OmegalinksLogoProps {
